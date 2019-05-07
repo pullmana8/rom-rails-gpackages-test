@@ -1,6 +1,3 @@
-# class PackageRepository < Hanami::Repository
-# end
-
 require_relative 'repository'
 
 module Gpkg
