@@ -1,0 +1,3 @@
+project=gpkg
+test=rspec
+template=erb
