@@ -41,6 +41,7 @@ group :test do
 end
 
 gem 'rom'
+gem 'rom-rails'
 gem 'rom-repository'
 gem 'rom-elasticsearch'
 
