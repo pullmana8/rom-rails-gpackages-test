@@ -34,6 +34,12 @@ group :development, :test do
   gem 'pry-remote'
 end
 
+group :test do 
+  gem 'mutant-rspec'
+  gem 'rspec-rails'
+  gem 'elasticsearch-extensions'
+end
+
 gem 'rom'
 gem 'rom-repository'
 gem 'rom-elasticsearch'
@@ -41,3 +47,5 @@ gem 'rom-elasticsearch'
 gem 'elasticsearch'
 gem 'elasticsearch-rails'
 gem 'elasticsearch-persistence'
+
+gem 'active_interaction', '~> 3.7'
