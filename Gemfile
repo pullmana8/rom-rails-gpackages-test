@@ -6,7 +6,7 @@ gem 'hanami',       '~> 1.3'
 gem 'rom'
 gem 'rom-elasticsearch'
 
-gem 'sqlite3'
+# gem 'sqlite3'
 
 group :development do
   # Code reloading
