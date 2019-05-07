@@ -1,6 +1,6 @@
 require 'bundler/setup'
 require 'hanami/setup'
-require 'hanami/model'
+# require 'hanami/model'
 require_relative '../lib/gpkg'
 require_relative '../apps/web/application'
 
@@ -18,13 +18,13 @@ Hanami.configure do
     #    adapter :sql, 'postgresql://localhost/gpkg_development'
     #    adapter :sql, 'mysql://localhost/gpkg_development'
     #
-    adapter :sql, ENV.fetch('DATABASE_URL')
+    # adapter :sql, ENV.fetch('DATABASE_URL')
 
     ##
     # Migrations
     #
-    migrations 'db/migrations'
-    schema     'db/schema.sql'
+    # migrations 'db/migrations'
+    # schema     'db/schema.sql'
   end
 
   mailer do
