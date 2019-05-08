@@ -11,13 +11,14 @@ module Gpkg
     end
 
     def self.configuration
-      @configuration ||= ROM::Configuration.new(:elasticsearch, 'http://localhost:9200')
-      # @configuration ||= ROM::Configuration.new(:sql, ENV.fetch('DATABASE_URL'), options).tap do |config|
-      config.auto_registration(Hanami.root.join('lib/gpkg/persistence'), namespace: 'Gpkg::Persistence')
+      @configuration ||= ROM::Configuration.new(:elasticsearch, ENV.fetch('http://localhost:9200'), options).tap do |config|
+        # @configuration ||= ROM::Configuration.new(:sql, ENV.fetch('DATABASE_URL'), options).tap do |config|
+        config.auto_registration(Hanami.root.join('lib/gpkg/persistence'), namespace: 'Gpkg::Persistence')
+      end
     end
-  end
 
-  def self.options
-    { logger: Hanami.logger }
+    def self.options
+      { logger: Hanami.logger }
+    end
   end
 end

@@ -12,7 +12,7 @@ RSpec.describe "List packages" do
     repository.create(name: "dev-lua", description: "The dev-lua category contains libraries, utilities or bindings written in or for the Lua programming language.")
   end
 
-  it "displays each book on the page" do
+  it "displays each packages on the page" do
     visit "/packages"
 
     within "#packages" do

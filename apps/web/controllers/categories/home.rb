@@ -7,7 +7,7 @@ module Web
         expose :categories
 
         def call(params)
-          @categories = Gpkg::Repositories[:category].all
+          @categories = Gpkg::Repositories[:Category].all
         end
       end
     end
