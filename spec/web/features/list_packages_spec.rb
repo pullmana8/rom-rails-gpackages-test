@@ -1,11 +1,22 @@
-require 'features_helper'
+require "features_helper"
 
-RSpec.describe 'List packages' do
-  it 'displays each package on the page' do
-    visit '/packages'
+RSpec.describe "List packages" do
+  let(:repository) do
+    Gpkg::Repositories[:Package]
+  end
 
-    within '#packages' do
-      expect(page).to have_css('.package', count: 2)
+  before do
+    repository.clear
+
+    repository.create(name: "dev-lang", description: "The dev-lang category contains various programming language implementations and related tools. ")
+    repository.create(name: "dev-lua", description: "The dev-lua category contains libraries, utilities or bindings written in or for the Lua programming language.")
+  end
+
+  it "displays each book on the page" do
+    visit "/packages"
+
+    within "#packages" do
+      expect(page).to have_selector(".package", count: 2), "Expected to find 2 packages"
     end
   end
 end
