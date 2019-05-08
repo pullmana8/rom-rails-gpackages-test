@@ -1,6 +1,5 @@
 require 'bundler/setup'
 require 'hanami/setup'
-# require 'hanami/model'
 require_relative '../lib/gpkg'
 require_relative '../apps/web/application'
 
